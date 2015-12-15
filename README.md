@@ -1,6 +1,6 @@
 # broadcast
 
-[![Build Status](https://travis-ci.org/softprops/broadcast.svg?branch=master)](https://travis-ci.org/softprops/broadcast)
+[![Build Status](https://travis-ci.org/softprops/broadcast.svg?branch=master)](https://travis-ci.org/softprops/broadcast) [![Coverage Status](https://coveralls.io/repos/softprops/broadcast/badge.svg?branch=master&service=github)](https://coveralls.io/github/softprops/broadcast?branch=master)
 
 A rustlang adapter for writing to multiple sources, adapted from the standard library's `std::io::Write#broadcast` which has since been deprecated.
 
