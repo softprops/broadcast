@@ -13,13 +13,15 @@ rustdoc api documentation can be found [here](https://softprops.github.io/broadc
 The currently unstable/deprecated std library function looks like this
 
 ```rust
-let broadcaster = writera.broadcast(writerb)
+let broadcaster = writera.broadcast(writerb);
 ```
 
 In broadcast this looks like
 
 ```rust
-let broadcaster = broadcast::Broadcast::new(writera, writerb)
+let broadcaster = broadcast::BroadcastWriter::new(
+  writera, writerb
+);
 ```
 
 Doug Tangren (softprops) 2015

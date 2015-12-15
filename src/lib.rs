@@ -1,21 +1,21 @@
 use std::io::{Result, Write};
 
 /// A type which duplicates its writes to all provided writers
-pub struct Broadcast<A, B> {
+pub struct BroadcastWriter<A: Write, B: Write> {
     primary: A,
     secondary: B,
 }
 
-impl<A: Write, B: Write> Broadcast<A,B> {
+impl<A: Write, B: Write> BroadcastWriter<A,B> {
     /// Creates a new broadcast instance which can be used as a Write
     /// All data will be written to the primary writer as well as the seconardary
     /// writer. Errors that occur during the either write operartion will be yielded.
-    pub fn new(primary: A, secondary: B) -> Broadcast<A, B> {
-        Broadcast { primary: primary, secondary: secondary }
+    pub fn new(primary: A, secondary: B) -> BroadcastWriter<A, B> {
+        BroadcastWriter { primary: primary, secondary: secondary }
     }
 }
 
-impl<A: Write, B: Write> Write for Broadcast<A, B> {
+impl<A: Write, B: Write> Write for BroadcastWriter<A, B> {
     fn write(&mut self, data: &[u8]) -> Result<usize> {
         let n = try!(self.primary.write(data));
         try!(self.secondary.write_all(&data[..n]));
