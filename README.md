@@ -8,4 +8,18 @@ A rustlang adapter for writing to multiple sources, adapted from the standard li
 
 rustdoc api documentation can be found [here](https://softprops.github.io/broadcast)
 
+## examples
+
+The currently unstable/deprecated std library function looks like this
+
+```rust
+let broadcaster = writera.broadcast(writerb)
+```
+
+In broadcast this looks like
+
+```rust
+let broadcaster = broadcast::Broadcast::new(writera, writerb)
+```
+
 Doug Tangren (softprops) 2015
