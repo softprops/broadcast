@@ -6,12 +6,15 @@ pub struct BroadcastWriter<A: Write, B: Write> {
     secondary: B,
 }
 
-impl<A: Write, B: Write> BroadcastWriter<A,B> {
+impl<A: Write, B: Write> BroadcastWriter<A, B> {
     /// Creates a new broadcast instance which can be used as a Write
     /// All data will be written to the primary writer as well as the seconardary
     /// writer. Errors that occur during the either write operartion will be yielded.
     pub fn new(primary: A, secondary: B) -> BroadcastWriter<A, B> {
-        BroadcastWriter { primary: primary, secondary: secondary }
+        BroadcastWriter {
+            primary: primary,
+            secondary: secondary,
+        }
     }
 }
 
