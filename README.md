@@ -4,6 +4,15 @@
 
 A rustlang adapter for writing to multiple sources, adapted from the standard library's `std::io::Write#broadcast` which has since been deprecated.
 
+## install
+
+add the following to your `Cargo.toml`
+
+```toml
+[dependencies]
+broadcast = "0.1"
+```
+
 ## api docs
 
 rustdoc api documentation can be found [here](https://softprops.github.io/broadcast)
