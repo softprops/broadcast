@@ -2,3 +2,9 @@
 name = "broadcast"
 version = "0.1.0"
 authors = ["softprops <d.tangren@gmail.com>"]
+description = "A rustlang adapter for writing to multiple sources"
+documentation = "http://softprops.github.io/broadcast"
+homepage = "https://github.com/softprops/broadcast"
+repository = "https://github.com/softprops/broadcast"
+keywords = ["io"]
+license = "MIT"
