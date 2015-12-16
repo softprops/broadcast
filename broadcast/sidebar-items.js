@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["BroadcastWriter","A type which duplicates its writes to the provided writers"]]});

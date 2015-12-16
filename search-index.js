@@ -1,0 +1,3 @@
+var searchIndex = {};
+searchIndex['broadcast'] = {"items":[[0,"","broadcast","",null,null],[3,"BroadcastWriter","","A type which duplicates its writes to the provided writers",null,null],[11,"new","","Creates a new BroadcastWriter instance which can be used as a Write.\nAll data will be written to the primary writer as well as the secondary\nwriter. Errors that occur during the either write operation will be yielded.",0,{"inputs":[{"name":"broadcastwriter"},{"name":"a"},{"name":"b"}],"output":{"name":"broadcastwriter"}}],[11,"write","","",0,null],[11,"flush","","",0,{"inputs":[{"name":"broadcastwriter"}],"output":{"name":"result"}}]],"paths":[[3,"BroadcastWriter"]]};
+initSearch(searchIndex);
